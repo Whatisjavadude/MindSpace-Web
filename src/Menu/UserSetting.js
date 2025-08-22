@@ -1,0 +1,66 @@
+import React from 'react'
+import { NavLink } from "react-router-dom";
+
+const UserSetting = () => {
+  return (
+    <div className="dashboard-container">
+          <nav className="sidebar">
+            <div className="logo">LOGO</div>
+            <ul>
+              <li>
+                <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+                  대시보드
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/User" className={({ isActive }) => (isActive ? "active" : "")}>
+                  사용자 관리
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/Post" className={({ isActive }) => (isActive ? "active" : "")}>
+                  게시판 관리
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/Statistics" className={({ isActive }) => (isActive ? "active" : "")}>
+                  통계
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/Setting" className={({ isActive }) => (isActive ? "active" : "")}>
+                  설정
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+    
+          <main className="main-content">
+            <section className="top-section">
+              <div className="card large">
+                <h3>사용자 정보</h3>
+                <div className="placeholder">
+                    <div className="card large">
+                        <h3>점수</h3>
+                        <div className="placeholder"></div>     
+                    </div>
+                    <div className="card large">
+                        <h3>누적 시간</h3>
+                        <div className="placeholder"></div>     
+                    </div>
+                </div>
+              </div>
+              <div className="card profile-card">
+                <div className="profile-image">사진</div>
+                <div className="profile-info">
+                  <p>관리자</p>
+                  <span>아이디</span>
+                </div>
+              </div>
+            </section>
+          </main> 
+    </div>
+  )
+}
+
+export default UserSetting
