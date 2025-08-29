@@ -8,8 +8,6 @@ import Statistics from "./Menu/Statistics";
 import Setting from "./Menu/Setting";
 import "./App.css";
 
-// ....
-
 const App = () => {
   return (
     <div>

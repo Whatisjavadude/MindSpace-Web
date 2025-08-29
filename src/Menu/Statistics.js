@@ -37,9 +37,11 @@ const Statistics = () => {
 
       <main className="main-content">
         <section className="top-section">
-          <div className="card large">
+          <div className="card">
             <h3>방문자 통계</h3>
-            <div className="placeholder"></div>
+            <div className="newUser">
+              <div className="placeholder">그래프</div>
+            </div>
           </div>
 
           <div className="card profile-card">
