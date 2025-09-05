@@ -1,3 +1,4 @@
+// 설정
 import React from 'react'
 import { NavLink } from "react-router-dom";
 
@@ -37,45 +38,50 @@ const Setting = () => {
 
       <main className="main-content">
         <section className="top-section">
-          <div className="settingCard">
-            <h2 className="UserList">관리자 계정</h2>
-            <div className="Bar">
-              
+          <div className="Setting-top">
+            <div className="card">
+              <div className="newUser">
+                <div className="title">관리자 계정</div>
+                <div className="Bar">
+
+                </div>
+              </div>
+            </div>
+            <div className="settingCard">
+              <h3>관리자 목록</h3>
+              <table className="list-table">
+                <thead>
+                  <tr>
+                    <th>아이디</th>
+                    <th>이름</th>
+                    <th>설정 / 삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* 데이터 자리 */}
+                  {[
+                    { id: 1, date: "2025-08-27", content: "문의 내용 1" },
+                    { id: 2, date: "2025-08-26", content: "문의 내용 2" }
+                  ].map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.date}</td>
+                      <td>{item.content}</td>
+                      <td>
+                        <NavLink to={`/inquiry/${item.id}`} className="detail-link">
+                          자세히
+                        </NavLink>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
-          <div className="settingCard">
-            <h3>관리자 목록</h3>
-            <table className="list-table">
-              <thead>
-                <tr>
-                  <th>아이디</th>
-                  <th>이름</th>
-                  <th>설정 / 삭제</th>
-                </tr>
-              </thead>
-              <tbody>
-                {/* 데이터 자리 */}
-                {[
-                  { id: 1, date: "2025-08-27", content: "문의 내용 1" },
-                  { id: 2, date: "2025-08-26", content: "문의 내용 2" }
-                ].map((item) => (
-                  <tr key={item.id}>
-                    <td>{item.date}</td>
-                    <td>{item.content}</td>
-                    <td>
-                      <NavLink to={`/inquiry/${item.id}`} className="detail-link">
-                        자세히
-                      </NavLink>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+
         </section>
       </main>
     </div>
   )
-}
+};
 
 export default Setting

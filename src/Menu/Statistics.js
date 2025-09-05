@@ -1,3 +1,4 @@
+// 통계
 import React from "react";
 import { NavLink } from "react-router-dom";
 
@@ -37,30 +38,37 @@ const Statistics = () => {
 
       <main className="main-content">
         <section className="top-section">
-          <div className="card">
-            <h3>방문자 통계</h3>
-            <div className="newUser">
-              <div className="placeholder">그래프</div>
+          <div className="user-top">
+            <div className="card">
+              <div className="title">방문자 통계</div>
+              <div className="newUser">
+                <div className="graph">그래프</div>
+              </div>
             </div>
-          </div>
 
-          <div className="card profile-card">
-            <div className="profile-image">사진</div>
-            <div className="profile-info">
-              <p>관리자</p>
-              <span>아이디</span>
+            <div className="card profile-card">
+              <div className="profile-image">사진</div>
+              <div className="profile-info">
+                <p>관리자</p>
+                <span>아이디</span>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="bottom-section">
-          <div className="card small">
-            <h3>검사 횟수 평균</h3>
-            <div className="placeholder"></div>
+        <section className="bottom">
+          <div className="card">
+            <div className="settingCard1">
+              <div className="title">검사 횟수</div>
+              <div className="graph"></div>
+            </div>
           </div>
-          <div className="card small">
-            <h3>변화도 평균</h3>
-            <div className="placeholder"></div>
+
+          <div className="card">
+            <div className="settingCard2">
+              <div className="title">변화도</div>
+              <div className="graph"></div>
+            </div>
           </div>
         </section>
       </main>

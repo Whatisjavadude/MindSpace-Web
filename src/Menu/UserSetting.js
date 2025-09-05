@@ -1,3 +1,4 @@
+// 사용자 상세 페이지
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./DashBoard.css";
