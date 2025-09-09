@@ -58,10 +58,8 @@ const Statistics = () => {
 
         <section className="bottom">
           <div className="card">
-            <div className="settingCard1">
               <div className="title">검사 횟수</div>
               <div className="graph"></div>
-            </div>
           </div>
 
           <div className="card">

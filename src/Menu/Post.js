@@ -37,7 +37,83 @@ const Post = () => {
       </nav>
 
       <main className="main-content">
-        <section className="top-section">
+        <section className="top">
+          <div className="card">
+            <div className="card-header">
+              <div className="title">FAQ</div>
+            </div>
+            <table className="list-table">
+              <thead>
+                <tr>
+                  <th>자주 묻는 질문</th>
+                  <th>답변</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>자주 묻는 질문 1</td>
+                  <td>
+                    <NavLink to="/faq/1" className="detail-link">
+                      수정
+                    </NavLink>
+                  </td>
+                </tr>
+                <tr>
+                  <td>자주 묻는 질문 2</td>
+                  <td>
+                    <NavLink to="/faq/2" className="detail-link">
+                      수정
+                    </NavLink>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="card">
+            <div className="card-header">
+              <div className="title">공지</div>
+            </div>
+            <table className="list-table">
+              <thead>
+                <tr>
+                  <th>작성일</th>
+                  <th>제목</th>
+                  <th>답변</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>자주 묻는 질문 1</td>
+                  <td>
+                    <NavLink to="/faq/1" className="detail-link">
+                      수정
+                    </NavLink>
+                  </td>
+                </tr>
+                <tr>
+                  <td>자주 묻는 질문 2</td>
+                  <td>
+                    <NavLink to="/faq/2" className="detail-link">
+                      수정
+                    </NavLink>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="card profile-card">
+            <div className="profile-image">사진</div>
+            <div className="profile-info">
+              <p>관리자</p>
+              <span>아이디</span>
+            </div>
+            <div className="profile-actions">
+            </div>
+          </div>
+        </section >
+
+        <section className="bottom-section">
           <div className="user-top">
             <div className="card">
               <div className="newUser">
@@ -69,59 +145,13 @@ const Post = () => {
                 </table>
               </div>
             </div>
-            <div className="card profile-card">
-              <div className="profile-image">사진</div>
-              <div className="profile-info">
-                <p>관리자</p>
-                <span>아이디</span>
-              </div>
-              <div className="profile-actions">
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bottom-section">
-          <div className="user-top">
-            <div className="card">
-              <div className="newUser">
-                <div className="title">FAQ</div>
-              </div>
-              <table className="list-table">
-                <thead>
-                  <tr>
-                    <th>자주 묻는 질문</th>
-                    <th>답변</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {/* 데이터 자리 */}
-                  <tr>
-                    <td>자주 묻는 질문 1</td>
-                    <td>
-                      <NavLink to="/faq/1" className="detail-link">
-                        수정
-                      </NavLink>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>자주 묻는 질문 2</td>
-                    <td>
-                      <NavLink to="/faq/2" className="detail-link">
-                        수정
-                      </NavLink>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
             <div className="empty">
 
             </div>
           </div>
         </section>
-      </main>
-    </div>
+      </main >
+    </div >
   )
 }
 

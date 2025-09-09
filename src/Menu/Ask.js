@@ -65,7 +65,7 @@ const Ask = () => {
               <hr className="divider" />
 
               <div className="inquiry-header">
-                <div className="ask-title">{'[ '}문의 제목1{' ]'}</div>
+                <div className="ask-title">{'[ '}{inquiry.content}{' ]'}</div>
                 <div className="send">보낸이 : {inquiry.email}</div>
                 <div className="ask-date">{inquiry.date}</div>
               </div>

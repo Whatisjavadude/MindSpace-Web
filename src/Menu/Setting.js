@@ -1,4 +1,3 @@
-// 설정
 import React from 'react'
 import { NavLink } from "react-router-dom";
 
@@ -58,7 +57,6 @@ const Setting = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {/* 데이터 자리 */}
                   {[
                     { id: 1, date: "2025-08-27", content: "문의 내용 1" },
                     { id: 2, date: "2025-08-26", content: "문의 내용 2" }

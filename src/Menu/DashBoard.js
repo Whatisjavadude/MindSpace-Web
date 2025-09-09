@@ -80,7 +80,7 @@ const DashBoard = () => {
 
             <div className="user-list">
               {newUsers.length === 0 ? (
-                <p className="graph">신규 회원이 없습니다.</p>
+                <p className="noUser">신규 회원이 없습니다.</p>
               ) : (
                 newUsers.slice(0, 3).map((user, idx) => (
                   <div key={idx} className="user-item">
@@ -116,14 +116,14 @@ const DashBoard = () => {
           <div className="card">
             <div className="card-header">
               <div className="title">FAQ</div>
-              <NavLink to="/users" className="plus-btn">더보기</NavLink>
+              <NavLink to="/FAQ" className="plus-btn">자세히</NavLink>
             </div>
 
             <div className="faq-list">
               {[
-                { id: 1, title: "FAQ 질문 1", content: "내용" },
-                { id: 2, title: "FAQ 질문 2", content: "내용" },
-                { id: 3, title: "FAQ 질문 3", content: "내용" }
+                { id: 1, title: "왜 심리치료 게임을 개발하게 되었나요?", content: "코로나19 이후 증가한 스트레스, 우울, 불안 등의 심리 문제에 접근성과 지속성을 갖춘 새로운 솔루션이 필요했기 때문입니다." },
+                { id: 2, title: "이 앱은 어떤 방식으로 감정을 측정하나요?", content: "설문조사(PSS, BDI-II, BAI), 안면 인식(Mediapipe, Tensorflow, OpenCV, CNN 모델), 뇌파 측정 기기를 통해 감정 데이터를 수집하고 분석합니다." },
+                { id: 3, title: "감정 측정 결과는 어떻게 활용되나요?", content: "서버에서 종합 분석 후, 사용자 맞춤형 심리 솔루션을 제공하며, 필요시 VR 콘텐츠와 연계되어 보다 몰입감 잇는 심리치료 경험을 제공합니다." }
               ].map((faq) => (
                 <div key={faq.id} className="faq-item">
                   <p className="faq-question">{faq.title}</p>
@@ -137,14 +137,14 @@ const DashBoard = () => {
           <div className="card">
             <div className="card-header">
               <div className="title">공지</div>
-              <NavLink to="/notice" className="plus-btn">더보기</NavLink>
+              <NavLink to="/Notice" className="plus-btn">자세히</NavLink>
             </div>
 
             <div className="notice-list">
               {[
-                { id: 1, title: "공지 제목1", content: "내용", isNew: true },
-                { id: 2, title: "공지 제목2", content: "내용", isNew: false },
-                { id: 3, title: "공지 제목3", content: "내용", isNew: false }
+                { id: 1, title: "공지 제목1", content: "내용1", isNew: true },
+                { id: 2, title: "공지 제목2", content: "내용2", isNew: false },
+                { id: 3, title: "공지 제목3", content: "내용3", isNew: false }
               ].map((notice) => (
                 <div key={notice.id} className="notice-item">
                   <p className="notice-title">
