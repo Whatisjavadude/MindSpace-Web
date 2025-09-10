@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import "./DashBoard.css";
+import DailySummary from "../Menu/DailySummary";
 
 const DashBoard = () => {
   const [newUsers, setNewUsers] = useState([]);
@@ -74,32 +75,11 @@ const DashBoard = () => {
 
           <div className="card">
             <div className="card-header">
-              <div className="title">신규 회원</div>
-              <NavLink to="/NewTotal" className="plus-btn">+</NavLink>
+              <div className="title">일자별 요약</div>
             </div>
 
-            <div className="user-list">
-              {newUsers.length === 0 ? (
-                <p className="noUser">신규 회원이 없습니다.</p>
-              ) : (
-                newUsers.slice(0, 3).map((user, idx) => (
-                  <div key={idx} className="user-item">
-                    <div className="user-name">{user.name || "이름"}</div>
-                    <div className="user-info">
-                      {user.email || "아이디"} |{" "}
-                      {user.createdAt
-                        ? new Date(user.createdAt).toLocaleDateString("ko-KR", {
-                          year: "numeric",
-                          month: "2-digit",
-                          day: "2-digit",
-                        }).replace(/\. /g, ".").replace(/\.$/, "")
-                        : "가입일"}
-                    </div>
-
-                    <hr />
-                  </div>
-                ))
-              )}
+            <div className="Daily">
+              <DailySummary />
             </div>
           </div>
 
