@@ -12,12 +12,13 @@ import Ask from "./Menu/Ask";
 import Statistics from "./Menu/Statistics";
 import Setting from "./Menu/Setting";
 import "./App.css";
+import Main_Page from "./pages/Main_Page";
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<DashBoard />} />
+        <Route path="/DashBoard" element={<DashBoard />} />
         <Route path="/User" element={<User />} />
         <Route path="/NewTotal" element={<NewTotal />} />
         <Route path="/UserTotal" element={<UserTotal />} />
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/Statistics" element={<Statistics />} />
         <Route path="/Setting" element={<Setting />} />
         <Route path="/UserSetting" element={<UserSetting />} />
+        <Route path="/" element={<Main_Page />} />
       </Routes>
     </div>
   );

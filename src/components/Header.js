@@ -20,6 +20,12 @@ function Header() {
         <a href="#feature" className="link">게임 소개</a>
         <a href="#faq" className="link">FAQ</a>
         <a href="#news" className="link">소식</a>
+        <button
+  className="dashboard-btn"
+  onClick={() => window.location.href = '/Dashboard'}
+>
+    관리자
+</button>
       </nav>
 
       <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>

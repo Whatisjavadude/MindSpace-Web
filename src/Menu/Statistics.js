@@ -9,7 +9,7 @@ const Statistics = () => {
         <div className="logo">LOGO</div>
         <ul>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink to="/DashBoard" className={({ isActive }) => (isActive ? "active" : "")}>
               대시보드
             </NavLink>
           </li>
@@ -40,7 +40,7 @@ const Statistics = () => {
         <section className="top-section">
           <div className="user-top">
             <div className="card">
-              <div className="title">방문자 통계</div>
+              <div className="card-title">방문자 통계</div>
               <div className="newUser">
                 <div className="graph">그래프</div>
               </div>
@@ -58,13 +58,13 @@ const Statistics = () => {
 
         <section className="bottom">
           <div className="card">
-              <div className="title">검사 횟수</div>
+              <div className="card-title">검사 횟수</div>
               <div className="graph"></div>
           </div>
 
           <div className="card">
             <div className="settingCard2">
-              <div className="title">변화도</div>
+              <div className="card-title">변화도</div>
               <div className="graph"></div>
             </div>
           </div>

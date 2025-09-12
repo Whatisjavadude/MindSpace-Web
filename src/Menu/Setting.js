@@ -8,7 +8,7 @@ const Setting = () => {
         <div className="logo">LOGO</div>
         <ul>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink to="/DashBoard" className={({ isActive }) => (isActive ? "active" : "")}>
               대시보드
             </NavLink>
           </li>
@@ -40,7 +40,7 @@ const Setting = () => {
           <div className="Setting-top">
             <div className="card">
               <div className="newUser">
-                <div className="title">관리자 계정</div>
+                <div className="card-title">관리자 계정</div>
                 <div className="Bar">
 
                 </div>

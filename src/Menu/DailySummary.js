@@ -14,7 +14,6 @@ const DailySummary = () => {
         visitors: Math.floor(Math.random() * 10),
         signups: Math.floor(Math.random() * 2),
         posts: Math.floor(Math.random() * 5),
-        comments: Math.floor(Math.random() * 3),
       });
     }
     return days;
@@ -41,7 +40,6 @@ const DailySummary = () => {
             <th>방문자</th>
             <th>가입</th>
             <th>새 글</th>
-            <th>댓글</th>
           </tr>
         </thead>
         <tbody>
@@ -52,16 +50,14 @@ const DailySummary = () => {
               <td>{row.visitors}</td>
               <td>{row.signups}</td>
               <td>{row.posts}</td>
-              <td>{row.comments}</td>
             </tr>
           ))}
-          <tr className="summary-row">
+          <tr className="summary-sum">
             <td>최근 7일 합계</td>
             <td>{recentTotal.pageViews}</td>
-            <td>{recentTotal.visitors}명</td>
-            <td>{recentTotal.signups}명</td>
+            <td>{recentTotal.visitors}</td>
+            <td>{recentTotal.signups}</td>
             <td>{recentTotal.posts}</td>
-            <td>{recentTotal.comments}</td>
           </tr>
         </tbody>
       </table>

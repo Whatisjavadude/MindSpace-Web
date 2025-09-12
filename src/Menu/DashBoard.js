@@ -1,12 +1,15 @@
-// 대시보드
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import FAQ from "./FAQ";
+import Notice from "./Notice";
 import { NavLink } from "react-router-dom";
 import "./DashBoard.css";
 import DailySummary from "../Menu/DailySummary";
 
 const DashBoard = () => {
   const [newUsers, setNewUsers] = useState([]);
+  const [faqData, setFaqData] = useState([]);
+  const [noticeData, setNoticeData] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:5001/api/users")
@@ -34,10 +37,10 @@ const DashBoard = () => {
   return (
     <div className="dashboard-container">
       <nav className="sidebar">
-        <div className="logo">LOGO</div>
+        <div className="DashLogo">MINDSPACE</div>
         <ul>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink to="/DashBoard" className={({ isActive }) => (isActive ? "active" : "")}>
               대시보드
             </NavLink>
           </li>
@@ -65,23 +68,25 @@ const DashBoard = () => {
       </nav>
 
       <main className="main-content">
-        <section className="top">
-          <div className="card">
-            <div className="card-header">
-              <div className="title">방문자 현황</div>
-            </div>
-            <div className="graph">그래프</div>
-          </div>
-
-          <div className="card">
-            <div className="card-header">
-              <div className="title">일자별 요약</div>
+        <section className="Upper">
+          <section className="top">
+            <div className="card">
+              <div className="card-header">
+                <div className="card-title">방문자 현황</div>
+              </div>
+              <div className="graph">그래프</div>
             </div>
 
-            <div className="Daily">
-              <DailySummary />
+            <div className="card">
+              <div className="card-header">
+                <div className="card-title-summary">일자별 요약</div>
+              </div>
+
+              <div className="Daily">
+                <DailySummary />
+              </div>
             </div>
-          </div>
+          </section>
 
           <div className="card profile-card">
             <div className="profile-image">사진</div>
@@ -95,7 +100,7 @@ const DashBoard = () => {
         <section className="bottom">
           <div className="card">
             <div className="card-header">
-              <div className="title">FAQ</div>
+              <div className="card-title">FAQ</div>
               <NavLink to="/FAQ" className="plus-btn">자세히</NavLink>
             </div>
 
@@ -105,7 +110,7 @@ const DashBoard = () => {
                 { id: 2, title: "이 앱은 어떤 방식으로 감정을 측정하나요?", content: "설문조사(PSS, BDI-II, BAI), 안면 인식(Mediapipe, Tensorflow, OpenCV, CNN 모델), 뇌파 측정 기기를 통해 감정 데이터를 수집하고 분석합니다." },
                 { id: 3, title: "감정 측정 결과는 어떻게 활용되나요?", content: "서버에서 종합 분석 후, 사용자 맞춤형 심리 솔루션을 제공하며, 필요시 VR 콘텐츠와 연계되어 보다 몰입감 잇는 심리치료 경험을 제공합니다." }
               ].map((faq) => (
-                <div key={faq.id} className="faq-item">
+                <div key={faq.id} className="faqItem">
                   <p className="faq-question">{faq.title}</p>
                   <span className="faq-answer">{faq.content}</span>
                   <hr />
@@ -116,7 +121,7 @@ const DashBoard = () => {
 
           <div className="card">
             <div className="card-header">
-              <div className="title">공지</div>
+              <div className="card-title">공지</div>
               <NavLink to="/Notice" className="plus-btn">자세히</NavLink>
             </div>
 

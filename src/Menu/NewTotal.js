@@ -33,10 +33,9 @@ const UserTotal = () => {
             });
     }, []);
 
-    const filteredTopUsers = users.filter((user) =>
+    const filteredTopUsers = newUsers.filter((user) =>
         user.name?.toLowerCase().includes(searchTop.toLowerCase())
     );
-
     const filteredBottomUsers = users.filter((user) =>
         user.name?.toLowerCase().includes(searchBottom.toLowerCase())
     );
@@ -46,7 +45,7 @@ const UserTotal = () => {
                 <div className="logo">LOGO</div>
                 <ul>
                     <li>
-                        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+                        <NavLink to="/DashBoard" className={({ isActive }) => (isActive ? "active" : "")}>
                             대시보드
                         </NavLink>
                     </li>
@@ -81,7 +80,7 @@ const UserTotal = () => {
                                 신규 회원 목록
                             </NavLink>
                             <NavLink to="/UserTotal" className={({ isActive }) => (isActive ? "active" : "")}>
-                                전체 사용자 목록                            
+                                전체 사용자 목록
                             </NavLink>
                             <input
                                 type="text"
@@ -91,8 +90,6 @@ const UserTotal = () => {
                                 className="search-input"
                             />
                         </div>
-
-
                         <table className="list-table">
                             <thead>
                                 <tr>
@@ -104,12 +101,12 @@ const UserTotal = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {newUsers.length === 0 ? (
+                                {filteredTopUsers.length === 0 ? (
                                     <tr>
-                                        <td colSpan="5" className="empty">신규 회원이 없습니다.</td>
+                                        <td colSpan="5" className="empty">회원이 없습니다.</td>
                                     </tr>
                                 ) : (
-                                    newUsers.map((user, idx) => (
+                                    filteredTopUsers.map((user, idx) => (
                                         <tr key={idx}>
                                             <td>{user.name || "이름"}</td>
                                             <td>{user.email || "아이디"}</td>
@@ -133,7 +130,7 @@ const UserTotal = () => {
                             </tbody>
                         </table>
                     </div>
-                    
+
                 </section>
             </main>
         </div>

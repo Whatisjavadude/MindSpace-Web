@@ -71,7 +71,7 @@ const FAQ = () => {
                 <div className="logo">LOGO</div>
                 <ul>
                     <li>
-                        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+                        <NavLink to="/DashBoard" className={({ isActive }) => (isActive ? "active" : "")}>
                             대시보드
                         </NavLink>
                     </li>
@@ -104,7 +104,7 @@ const FAQ = () => {
                     <div className="user-top">
                         <div className="card">
                             <div className="search">
-                                <div className="title">FAQ</div>
+                                <div className="card-title">FAQ</div>
                             </div>
 
                             <table className="list-table border w-full">

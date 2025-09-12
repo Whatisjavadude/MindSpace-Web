@@ -49,7 +49,7 @@ const User = () => {
         <div className="logo">LOGO</div>
         <ul>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink to="/DashBoard" className={({ isActive }) => (isActive ? "active" : "")}>
               대시보드
             </NavLink>
           </li>
@@ -82,7 +82,7 @@ const User = () => {
           <div className="user-top">
             <div className="card">
               <div className="search">
-                <div className="title">신규 회원 목록</div>
+                <div className="card-title">신규 회원 목록</div>
                 <input
                   type="text"
                   placeholder="이름 검색"
@@ -94,7 +94,6 @@ const User = () => {
                   전체보기
                 </NavLink>
               </div>
-
               <table className="list-table">
                 <thead>
                   <tr>
@@ -151,7 +150,7 @@ const User = () => {
           <div className="user-top">
             <div className="card">
               <div className="search">
-                <div className="title">사용자 목록</div>
+                <div className="card-title">사용자 목록</div>
                 <input
                   type="text"
                   placeholder="이름 검색"

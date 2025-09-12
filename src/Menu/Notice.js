@@ -98,7 +98,7 @@ const Notice = () => {
                     <div className="user-top">
                         <div className="card">
                             <div className="search">
-                                <div className="title">공지</div>
+                                <div className="card-title">공지</div>
                             </div>
 
                             <table className="list-table border w-full">

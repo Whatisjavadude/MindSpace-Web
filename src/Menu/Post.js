@@ -9,7 +9,7 @@ const Post = () => {
         <div className="logo">LOGO</div>
         <ul>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink to="/DashBoard" className={({ isActive }) => (isActive ? "active" : "")}>
               대시보드
             </NavLink>
           </li>
@@ -40,11 +40,11 @@ const Post = () => {
         <section className="top">
           <div className="card">
             <div className="card-header">
-              <div className="title">FAQ</div>
+              <div className="card-title">FAQ</div>
             </div>
             <table className="list-table">
               <thead>
-                <tr>
+                <tr className='boldLine'>
                   <th>자주 묻는 질문</th>
                   <th>답변</th>
                 </tr>
@@ -71,7 +71,7 @@ const Post = () => {
           </div>
           <div className="card">
             <div className="card-header">
-              <div className="title">공지</div>
+              <div className="card-title">공지</div>
             </div>
             <table className="list-table">
               <thead>
@@ -117,7 +117,7 @@ const Post = () => {
           <div className="user-top">
             <div className="card">
               <div className="newUser">
-                <div className="title">문의</div>
+                <div className="card-title">문의</div>
                 <table className="list-table">
                   <thead>
                     <tr>
