@@ -228,7 +228,9 @@ a:visited {
   text-align: center;
   padding: 20px;
   background-color: #ffffff;
-  width: 151px;
+  margin-left : auto;
+  width : 151px;
+  max-width: 151px;
   height: 400px;
 }
 
