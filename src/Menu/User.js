@@ -46,7 +46,7 @@ const User = () => {
     <div className="dashboard-container">
       {/* 사이드바 */}
       <nav className="sidebar">
-        <div className="logo">LOGO</div>
+        <div className="DashLogo">MINDSPACE</div>
         <ul>
           <li>
             <NavLink to="/DashBoard" className={({ isActive }) => (isActive ? "active" : "")}>
