@@ -68,7 +68,7 @@ const FAQ = () => {
         <div className="dashboard-container">
             {/* 사이드바 */}
             <nav className="sidebar">
-                <div className="logo">LOGO</div>
+                <div className="DashLogo">MINDSPACE</div>
                 <ul>
                     <li>
                         <NavLink to="/DashBoard" className={({ isActive }) => (isActive ? "active" : "")}>
@@ -93,6 +93,12 @@ const FAQ = () => {
                     <li>
                         <NavLink to="/Setting" className={({ isActive }) => (isActive ? "active" : "")}>
                             설정
+                        </NavLink>
+                    </li>
+                    
+                    <li>
+                        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+                            홈페이지
                         </NavLink>
                     </li>
                 </ul>

@@ -63,7 +63,7 @@ const Notice = () => {
     return (
         <div className="dashboard-container">
             <nav className="sidebar">
-                <div className="logo">LOGO</div>
+                <div className="DashLogo">MINDSPACE</div>
                 <ul>
                     <li>
                         <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
@@ -88,6 +88,11 @@ const Notice = () => {
                     <li>
                         <NavLink to="/Setting" className={({ isActive }) => (isActive ? "active" : "")}>
                             설정
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+                         홈페이지
                         </NavLink>
                     </li>
                 </ul>
